@@ -146,10 +146,8 @@ const dummyMessages = [
 
 const Chat = ({ params }: { params: { session_id: string } }) => {
 	const theme = useTheme();
-
 	const token =
 		typeof window !== "undefined" ? localStorage.getItem("jwtToken") : null;
-
 	const router = useRouter();
 
 	const [pdfs, setPDFs] = useState<PDF[] | null>(null);
@@ -265,7 +263,8 @@ const Chat = ({ params }: { params: { session_id: string } }) => {
 			</Drawer>
 			<Box
 				sx={{
-					width: `calc(100vw - ${globalStyles.drawerWidth}px)`,
+					width: `calc(100vw - ${globalStyles.drawerWidth})`,
+					// width: "50vw",
 					display: "flex",
 					flexGrow: 1,
 					// background: "lightblue",

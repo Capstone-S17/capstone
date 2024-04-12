@@ -15,18 +15,14 @@ from sqlalchemy.orm import Session
 from sql_app import crud, schemas
 from sql_app.database import SessionLocal
 import pytz
-
-
 import os
-
 
 from hash import verify_password, hash_password
 
 
-
 SECRET_KEY = os.environ.get("JWT_SECRET_KEY")
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 120
+ACCESS_TOKEN_EXPIRE_MINUTES = 600
 
 app = FastAPI()
 rag = RAGpipeline()

@@ -34,10 +34,10 @@ const DateDropdown: React.FC<MyComponentProps> = ({ props }) => {
 						shrink: false,
 					}}
 					sx={{
-						height: "5px",
+						// height: props.height,
 						fontSize: props.fontSize,
 						width: props.width,
-						// background: "pink",
+						// background: "lightblue",
 						"& fieldset": { border: "none" },
 						"& .MuiOutlinedInput-root": {
 							background: props.background
@@ -45,17 +45,18 @@ const DateDropdown: React.FC<MyComponentProps> = ({ props }) => {
 								: theme.palette.primary.main,
 							borderColor: "transparent",
 							borderRadius: "25px",
+							height: "100%",
 							// fontSize: props.fontSize,
 						},
-						// "& .MuiFormLabel-root": {
-						// 	// ml: "6px",
-						// 	// color: "#333333",
-						// },
-						// "& .MuiInputBase-inputAdornedEnd": {
-						// 	height: "100%",
-						// 	// ml: "6px",
-						// 	// color: "#333333",
-						// },
+						"& .MuiFormLabel-root": {
+							mt: props.mt,
+							// color: "#333333",
+						},
+						"& .MuiInputBase-inputAdornedEnd": {
+							// height: "100%",
+							// ml: "6px",
+							// color: "#333333",
+						},
 					}}
 					{...params}
 				/>

@@ -4,7 +4,7 @@ export const globalStyles = {
 	footerHeight: "7vh",
 	barHeight: "7vh", // heights for RoundedDropdown, SearchFields
 	fontSize: "1.75vh",
-	drawerWidth: 240,
+	drawerWidth: 300,
 };
 
 export const fontStyles = {

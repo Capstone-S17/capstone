@@ -48,9 +48,9 @@ const SearchField = ({
 			size="small"
 			sx={{
 				width: width,
-				height: "fit-content",
-				// height: height,
-				// background: "pink",
+				height: height,
+				// height: 'fit-content',
+				// background: "yellow",
 			}}
 			PaperComponent={CustomPaper}
 			// value={value}
@@ -70,7 +70,7 @@ const SearchField = ({
 						background: background
 							? background
 							: theme.palette.primary.main,
-						// height: height,
+						height: height,
 						// borderColor: "transparent",
 						borderRadius: "25px",
 						"& fieldset": { border: "none" },
@@ -79,6 +79,10 @@ const SearchField = ({
 						// 	color: "black",
 						// 	borderColor: "transparent",
 						// },
+						"& .MuiFormLabel-root": {
+							mt: "4px",
+							// color: "#333333",
+						},
 					}}
 					{...params}
 					InputLabelProps={{

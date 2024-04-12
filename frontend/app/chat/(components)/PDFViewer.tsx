@@ -116,6 +116,7 @@ const PDFViewer: React.FC<MyComponentProps> = ({
 				// backgroundColor: "lightblue",
 				width: "50%",
 				// width: "43vh",
+				alignItems: "center",
 				justifyContent: "space-between",
 			}}
 		>
@@ -127,7 +128,8 @@ const PDFViewer: React.FC<MyComponentProps> = ({
 					height: globalStyles.headerHeight,
 					// background: theme.palette.primary.main,
 					// background: "pink",
-					justifyContent: "center",
+					width: "100%",
+					justifyContent: "space-evenly",
 				}}
 			>
 				<PDFDropdown
@@ -139,9 +141,10 @@ const PDFViewer: React.FC<MyComponentProps> = ({
 					sx={{
 						display: "flex",
 						justifyContent: "center",
-						width: "60px",
-						height: "5vh",
+						width: "5%",
+						height: "4.85vh",
 						border: 1,
+						mr: -1,
 						// borderColor: theme.palette.text.primary,
 						borderColor: "#C4C4C4",
 						borderRadius: "4px",
@@ -154,7 +157,7 @@ const PDFViewer: React.FC<MyComponentProps> = ({
 					value={currentPage.toString()}
 					onChange={handleInputPage}
 				/>
-				<Typography sx={{ m: 2 }}>/{pdf?.num_pages}</Typography>
+				<Typography sx={{ m: 0 }}> /{pdf?.num_pages}</Typography>
 			</Box>
 			<Box
 				sx={{
@@ -166,6 +169,7 @@ const PDFViewer: React.FC<MyComponentProps> = ({
 					flexDirection: "column",
 					height: `calc(100vh - ${globalStyles.headerHeight})`,
 					overflow: "clip",
+					width: "100%",
 				}}
 			>
 				<Document

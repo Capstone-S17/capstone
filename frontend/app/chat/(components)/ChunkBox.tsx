@@ -95,7 +95,7 @@ const ChunkBox: React.FC<MyComponentProps> = ({
 						variant="body2"
 						style={{
 							display: "-webkit-box",
-							WebkitLineClamp: 3,
+							WebkitLineClamp: 5,
 							WebkitBoxOrient: "vertical",
 							overflow: "hidden",
 							textOverflow: "ellipsis",

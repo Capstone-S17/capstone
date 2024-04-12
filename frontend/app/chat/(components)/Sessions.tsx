@@ -116,7 +116,8 @@ const Sessions: React.FC<MyComponentProps> = ({
 			>
 				<Button
 					sx={{
-						height: "5vh",
+						height: "4vh",
+						borderRadius: "10px",
 						textTransform: "none",
 						// background: "transparent",
 						background: "#2052B5",
@@ -130,7 +131,7 @@ const Sessions: React.FC<MyComponentProps> = ({
 						},
 						py: 0.5,
 						px: styles.insideButtonPx,
-						width: "70%",
+						width: "100%",
 					}}
 					onClick={() => {
 						router.push("/filter");

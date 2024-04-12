@@ -33,7 +33,9 @@ const PDFDropdown: React.FC<MyComponentProps> = ({
 	const [displayPDF, setDisplayPDF] = React.useState<string>("");
 
 	return (
-		<Box sx={{ width: "70%", overflow: "clip", m: 2 }}>
+		<Box
+			sx={{ width: "80%", height: "fit-content", overflow: "clip", m: 0 }}
+		>
 			<FormControl sx={{ width: "100%" }}>
 				<Select
 					sx={{ height: "5vh", background: "white" }}

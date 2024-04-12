@@ -100,6 +100,7 @@ const Filter = () => {
 		<LocalizationProvider dateAdapter={AdapterDayjs}>
 			<Box
 				sx={{
+					// background: "pink",
 					display: "flex",
 					flexDirection: "column",
 					// #04223E #1A88C5
@@ -137,13 +138,12 @@ const Filter = () => {
 							component={NextLink}
 							href="/chat"
 							underline="hover"
-							variant="body1"
+							variant="h5"
 							// color="black"
 						>
 							Chat
 						</Link>
-						<Typography>Hello, Superadmin</Typography>
-						{/* <Icon /> */}
+						<Typography variant="h5">Hello, User</Typography>
 					</Box>
 					{/* <Divider sx={{ width: "100%", background: "darkblue" }} /> */}
 				</Box>
@@ -155,6 +155,7 @@ const Filter = () => {
 						width: "70vw",
 						height: "77.5vh",
 						// background: "lightblue",
+						justifyContent: "space-between",
 					}}
 				>
 					<Box
@@ -162,18 +163,21 @@ const Filter = () => {
 							display: "flex",
 							flexDirection: "column",
 							// background: "pink",
-							width: "40%",
+							width: "60%",
 						}}
 					>
 						<Typography
 							textAlign="left"
-							variant="h3"
+							variant="h1"
 							fontWeight={600}
-							sx={{ mb: 0 }}
 						>
 							Find documents within minutes
 						</Typography>
-						<Typography textAlign="left" sx={{ mb: 1 }}>
+						<Typography
+							variant="h5"
+							textAlign="left"
+							sx={{ my: 1 }}
+						>
 							Search using document names and/or filters to
 							quickly streamline documents for the references you
 							need.
@@ -184,7 +188,9 @@ const Filter = () => {
 							display: "flex",
 							flexDirection: "column",
 							background: theme.palette.primary.dark,
-							justifyContent: "space-between",
+							// background: "lightgreen",
+							justifyContent: "space-evenly",
+							// justifyContent: "space-between",
 							// justifyContent: "space-around",
 							height: "52.5vh",
 							p: 2,
@@ -194,7 +200,7 @@ const Filter = () => {
 						<SearchField
 							background="white"
 							title="Document Name"
-							height={styles.barHeight}
+							height="4vh"
 							width="100%"
 							fontSize={styles.fontSize}
 							onSelect={(newValue: string) => {
@@ -209,16 +215,15 @@ const Filter = () => {
 							sx={{
 								display: "flex",
 								// alignItems: "center",
-								// background: "lightblue",
-								my: 1,
-								gap: 1,
-								height: "fit-content",
+								// background: "pink",
+								gap: 2,
+								height: "4vh",
 							}}
 						>
 							<SearchField
 								background="white"
 								title="Search companies"
-								height={styles.barHeight}
+								height="100%"
 								width="100%"
 								fontSize={styles.fontSize}
 								onSelect={(newValue: string) => {
@@ -238,7 +243,7 @@ const Filter = () => {
 									onChange: (d) => setStartDate(d),
 									width: "100%",
 									height: styles.barHeight,
-									mt: "-3px",
+									mt: "4px",
 									fontSize: styles.fontSize,
 								}}
 							/>
@@ -251,7 +256,7 @@ const Filter = () => {
 									onChange: (d) => setEndDate(d),
 									width: "100%",
 									height: styles.barHeight,
-									mt: "-3px",
+									mt: "4px",
 									fontSize: styles.fontSize,
 								}}
 							/>
@@ -356,7 +361,7 @@ const Filter = () => {
 							sx={{
 								display: "flex",
 								justifyContent: "center",
-								height: "7vh",
+								height: "5vh",
 							}}
 						>
 							<RoundButton
@@ -379,7 +384,6 @@ const Filter = () => {
 						</Box>
 					</Box>
 				</Box>
-
 				<Footer />
 			</Box>
 		</LocalizationProvider>

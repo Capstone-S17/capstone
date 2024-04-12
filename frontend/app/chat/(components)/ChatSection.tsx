@@ -172,7 +172,7 @@ const ChatSection: React.FC<MyComponentProps> = ({
 						/>
 					)}
 				</IconButton>
-				<Typography sx={{ ml: 2 }} fontWeight="bold" variant="h5">
+				<Typography sx={{ ml: 2 }} fontWeight="bold" variant="h4">
 					FELIX Chat
 				</Typography>
 				{/* <IconButton
