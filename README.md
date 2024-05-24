@@ -6,7 +6,7 @@ Put the .env file in the root of the project meaning inside the capstone-fronten
 
 ### Frontend
 
-1. cd into frontend and run "npm i"
+1. cd into frontend and run "npm i" then "npm run dev"
 2. Place all the pdfs into /frontend/public/pdfs folder (create the pdfs folder)
 
 ### Backend
