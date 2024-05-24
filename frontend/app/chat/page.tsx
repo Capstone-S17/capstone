@@ -50,6 +50,7 @@ const dummyMessages = [
 		session_id: 3,
 		message: "Hello, world!",
 		role: "user",
+		created_at: Date.now()
 	},
 	{
 		id: 1,
@@ -65,12 +66,14 @@ const dummyMessages = [
 				pdfID: 0,
 			},
 		],
+		created_at: Date.now()
 	},
 	{
 		id: 2,
 		session_id: 3,
 		message: "What is a copypasta?",
 		role: "user",
+		created_at: Date.now()
 	},
 	{
 		id: 3,
@@ -87,12 +90,14 @@ const dummyMessages = [
 				pdfID: 0,
 			},
 		],
+		created_at: Date.now()
 	},
 	{
 		id: 4,
 		session_id: 3,
 		message: "What is a copypasta?",
 		role: "user",
+		created_at: Date.now()
 	},
 	{
 		id: 4,
@@ -109,39 +114,41 @@ const dummyMessages = [
 				pdfID: 0,
 			},
 		],
+		created_at: Date.now()
 	},
 	{
 		id: 4,
 		session_id: 3,
 		message: "What were Blackrock's earnings last quarter?",
 		role: "user",
+		created_at: Date.now()
 	},
-	{
-		id: 4,
-		session_id: 3,
-		message: "What is the iShares fund?",
-		role: "bot",
-		chunks: [
-			{
-				id: 2,
-				text: `iShares MSCI India Index ETF (“MSCI India ETF”), a sub-fund of
-                the iShares Southeast Asia Trust (the “Trust”), was launched
-                and commenced trading on 15 June 2006 on the Singapore
-                Exchange Securities `,
-				pageNum: 3,
-				pdfName:
-					"SG220831OTHRXDF6_Blackrock (Singapore) Limited_20220831171053_00_GA_4Q_20220831.1.pdf",
-				pdfID: 0,
-			},
-			{
-				id: 2,
-				text: "THE INVERSE TURKEY PROBLEM",
-				pageNum: 250,
-				pdfName: "Antifragile - Nassim Taleb",
-				pdfID: 0,
-			},
-		],
-	},
+	// {
+	// 	id: 4,
+	// 	session_id: 3,
+	// 	message: "What is the iShares fund?",
+	// 	role: "bot",
+	// 	chunks: [
+	// 		{
+	// 			id: 2,
+	// 			text: `iShares MSCI India Index ETF (“MSCI India ETF”), a sub-fund of
+    //             the iShares Southeast Asia Trust (the “Trust”), was launched
+    //             and commenced trading on 15 June 2006 on the Singapore
+    //             Exchange Securities `,
+	// 			pageNum: 3,
+	// 			pdfName:
+	// 				"SG220831OTHRXDF6_Blackrock (Singapore) Limited_20220831171053_00_GA_4Q_20220831.1.pdf",
+	// 			pdfID: 0,
+	// 		},
+	// 		{
+	// 			id: 2,
+	// 			text: "THE INVERSE TURKEY PROBLEM",
+	// 			pageNum: 250,
+	// 			pdfName: "Antifragile - Nassim Taleb",
+	// 			pdfID: 0,
+	// 		},
+	// 	],
+	// },
 ];
 
 const Chat = ({ params }: { params: { session_id: string } }) => {
@@ -285,8 +292,8 @@ const Chat = ({ params }: { params: { session_id: string } }) => {
 					token={token}
 					currentQuery={currentQuery}
 					setCurrentQuery={setCurrentQuery}
-					messages={messages}
-					// messages={dummyMessages}
+					// messages={messages}
+					messages={dummyMessages}
 					setMessages={setMessages}
 					currentSessionId={currentSessionId}
 					setHighlightedChunks={setHighlightedChunks}

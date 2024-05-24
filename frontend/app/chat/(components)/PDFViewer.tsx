@@ -170,14 +170,16 @@ const PDFViewer: React.FC<MyComponentProps> = ({
 			>
 				<Document
 					className={style.document}
-					file={"../" + pdf?.filepath}
+					// file={"../" + pdf?.filepath}
+					file={"Antifragile.pdf"}
 				>
 					<List
 						className={listStyles}
 						itemData={{ pdfHeight, textRenderer }}
 						ref={listRef}
 						height={pdfHeight}
-						itemCount={pdf?.num_pages!}
+						// itemCount={pdf?.num_pages!}
+						itemCount={5}
 						itemSize={pdfHeight * 1.05}
 						width={pdfHeight * 0.801}
 						onItemsRendered={({ visibleStopIndex }) => {
